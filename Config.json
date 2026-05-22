@@ -1,0 +1,294 @@
+{
+  "version": 5,
+  "saved": "2026-05-16T03:48:09.074Z",
+  "pads": [
+    {
+      "label": "KICK",
+      "icon": "🥁",
+      "color": 0,
+      "imgUrl": "https://dl.dropboxusercontent.com/scl/fi/ujvnwpdgahkmp1q0raqls/Dobes.jpg?rlkey=u0mf8an72mc263gkfajz440il&st=d15lom78&dl=1",
+      "sndName": "SimplyDobes.mp3",
+      "sndUrl": "https://dl.dropboxusercontent.com/scl/fi/9sdpq03xv5k967m1tvc4n/SimplyDobes.mp3?rlkey=mxrznwfkq9kede4jmvdj9wfbs&st=6w1dj6oz&dl=1"
+    },
+    {
+      "label": "SNARE",
+      "icon": "🎹",
+      "color": 1,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "HI-HAT",
+      "icon": "🎸",
+      "color": 2,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "CLAP",
+      "icon": "🎺",
+      "color": 3,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "BASS",
+      "icon": "🎷",
+      "color": 4,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "LEAD",
+      "icon": "🎻",
+      "color": 5,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "FX 1",
+      "icon": "🎤",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "FX 2",
+      "icon": "🔊",
+      "color": 7,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "VOX",
+      "icon": "💥",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "PAD",
+      "icon": "⚡",
+      "color": 9,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "LOOP 1",
+      "icon": "🔥",
+      "color": 10,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "LOOP 2",
+      "icon": "🌊",
+      "color": 11,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "PERC 1",
+      "icon": "💫",
+      "color": 0,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "PERC 2",
+      "icon": "🎵",
+      "color": 1,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SFX 1",
+      "icon": "🎶",
+      "color": 2,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SFX 2",
+      "icon": "🎧",
+      "color": 3,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "RISE",
+      "icon": "🎚",
+      "color": 4,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "DROP",
+      "icon": "🎛",
+      "color": 5,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "CRASH",
+      "icon": "🏆",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "RIDE",
+      "icon": "💎",
+      "color": 7,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "TOM HI",
+      "icon": "🌙",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "TOM LO",
+      "icon": "⭐",
+      "color": 9,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "OPEN HH",
+      "icon": "🎯",
+      "color": 10,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SHAKER",
+      "icon": "🚀",
+      "color": 11,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "TAMBR",
+      "icon": "👏",
+      "color": 0,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "CLAVE",
+      "icon": "🌈",
+      "color": 1,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "COWBLL",
+      "icon": "🎊",
+      "color": 2,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "BONGO",
+      "icon": "🎉",
+      "color": 3,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "CONGA",
+      "icon": "🦁",
+      "color": 4,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "STAB 1",
+      "icon": "🐯",
+      "color": 5,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "STAB 2",
+      "icon": "🦊",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SYNTH 1",
+      "icon": "🐉",
+      "color": 7,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SYNTH 2",
+      "icon": "🌀",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "NOISE",
+      "icon": "🔮",
+      "color": 9,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "SWEEP",
+      "icon": "💣",
+      "color": 10,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    },
+    {
+      "label": "FILL",
+      "icon": "🎃",
+      "color": 11,
+      "imgUrl": null,
+      "sndName": null,
+      "sndUrl": null
+    }
+  ]
+}
