@@ -58,8 +58,8 @@ body>*{position:relative;z-index:1;}
 #pad-wrap{flex:1;overflow:hidden;display:flex;align-items:stretch;padding:6px;}
 #pad-area{
   flex:1;display:grid;
-  grid-template-columns:repeat(5,1fr);
-  grid-template-rows:repeat(5,1fr);
+  grid-template-columns:repeat(6,1fr);
+  grid-template-rows:repeat(6,1fr);
   gap:clamp(5px,1.3vw,10px);
 }
 
@@ -70,7 +70,7 @@ body>*{position:relative;z-index:1;}
   cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:3px;overflow:hidden;
   transition:transform .06s,box-shadow .12s,filter .12s;
-  user-select:none;background:rgba(22,22,34,.82);touch-action:none;
+  user-select:none;background:rgba(22,22,34,.82);
   backdrop-filter:blur(3px);
 }
 .pad::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,transparent 55%);pointer-events:none;}
@@ -226,7 +226,7 @@ body>*{position:relative;z-index:1;}
 <!-- STATUS -->
 <div id="statusbar">
   <span id="status">READY</span>
-  <span id="play-info">0 PLAYING · 0/25 LOADED</span>
+  <span id="play-info">0 PLAYING · 0/36 LOADED</span>
 </div>
 
 <!-- MAIN ROW -->
@@ -359,7 +359,7 @@ body>*{position:relative;z-index:1;}
 /* ══════════════════════════════════════════════
    CONSTANTS
 ══════════════════════════════════════════════ */
-const ICONS=['🥁','🎹','🎸','🎺','🎷','🎻','🎤','🔊','💥','⚡','🔥','🌊','💫','🎵','🎶','🎧','🎚','🎛','🏆','💎','🌙','⭐','🎯','🚀','👏','🌈','🎊','🎉','🦁','🐯','🦊','🐉','🌀','🔮','💣','🎃'];
+const ICONS=['🏒','🥅','🧊','⛸️','🎵','🎶','🎸','🎹','🎺','🎷','🎤','🔥','⚡','💥','🚨','📣','🎯','⭐','💪','👊','😱','🤯','😭','😤','🥳','🎉','🏆','👏','🙌','💀','😈','🎃','💣','⚠️','🌟','💫'];
 const COLORS=[
   {n:'Teal',  h:'#00bfa5',g:'rgba(0,191,165,.6)'},
   {n:'Pink',  h:'#e91e8c',g:'rgba(233,30,140,.6)'},
@@ -374,12 +374,12 @@ const COLORS=[
   {n:'Cyan',  h:'#18ffff',g:'rgba(24,255,255,.6)'},
   {n:'Rose',  h:'#ff4081',g:'rgba(255,64,129,.6)'},
 ];
-const DEFLAB=['KICK','SNARE','HI-HAT','CLAP','BASS','LEAD','FX 1','FX 2','VOX','PAD','LOOP 1','LOOP 2','PERC 1','PERC 2','SFX 1','SFX 2','RISE','DROP','CRASH','RIDE','TOM','OPEN HH','SHAKER','STAB','FILL'];
-const N=25;
+const DEFLAB=['KICK','SNARE','HI-HAT','CLAP','BASS','LEAD','FX 1','FX 2','VOX','PAD','LOOP 1','LOOP 2','PERC 1','PERC 2','SFX 1','SFX 2','RISE','DROP','CRASH','RIDE','TOM HI','TOM LO','OPEN HH','SHAKER','TAMBR','CLAVE','COWBLL','BONGO','CONGA','STAB 1','STAB 2','SYNTH 1','SYNTH 2','NOISE','SWEEP','FILL'];
+const N=36;
 const LS_KEY='padfx_v5';
 
 /* ══════════════════════════════════════════════
-   PERSISTENCE
+   PERSISTENCE + AUTO-SAVE
 ══════════════════════════════════════════════ */
 function defaultPad(i){
   return {label:DEFLAB[i]||('PAD '+(i+1)),icon:ICONS[i%ICONS.length],color:i%COLORS.length,
@@ -392,9 +392,39 @@ function buildConfigData(){
     pads:pads.map(p=>({label:p.label,icon:p.icon,color:p.color,imgUrl:p.imgUrl||null,sndName:p.sndName||null,sndUrl:p.sndUrl||null}))
   };
 }
+
+let autoSaveEnabled=false;
+
 function saveState(){
   try{localStorage.setItem(LS_KEY,JSON.stringify(buildConfigData()));}
   catch(e){setStatus('⚠ Erreur sauvegarde: '+e.message);}
+  
+  // Auto-download config.json if enabled
+  if(autoSaveEnabled){
+    downloadConfigFile('config.json');
+  }
+}
+
+function toggleAutoSave(){
+  autoSaveEnabled=!autoSaveEnabled;
+  const btn=document.getElementById('autosave-btn');
+  btn.textContent=autoSaveEnabled?'💾 AUTO: ON':'💾 AUTO: OFF';
+  btn.classList.toggle('on',autoSaveEnabled);
+  setStatus(autoSaveEnabled?'AUTO-SAVE ACTIVÉ — config.json se télécharge à chaque modif':'AUTO-SAVE DÉSACTIVÉ');
+  try{localStorage.setItem(LS_KEY+'_autosave',autoSaveEnabled?'1':'0');}catch(e){}
+}
+
+function downloadConfigFile(filename){
+  const json=JSON.stringify(buildConfigData(),null,2);
+  const blob=new Blob([json],{type:'application/json'});
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download=filename;
+  a.style.display='none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(()=>URL.revokeObjectURL(a.href),2000);
 }
 
 const pads=Array.from({length:N},(_,i)=>defaultPad(i));
@@ -550,16 +580,17 @@ function getPadUnder(x,y){
 const padArea=document.getElementById('pad-area');
 const padEls=[];
 let dragSrc=null,dragClone=null,dragOffX=0,dragOffY=0;
+let activeDragHandlers=null;
 
 for(let i=0;i<N;i++){
   const el=document.createElement('div');el.className='pad';
   padArea.appendChild(el);padEls.push(el);renderPad(i);
 
-  let pt=null,isDragging=false,startX=0,startY=0;
+  let pt=null,startX=0,startY=0;
 
   el.addEventListener('pointerdown',e=>{
     e.preventDefault();
-    startX=e.clientX;startY=e.clientY;isDragging=false;
+    startX=e.clientX;startY=e.clientY;
 
     if(moveMode){
       if(moveFrom===null){
@@ -574,44 +605,80 @@ for(let i=0;i<N;i++){
       }
       return;
     }
-    pt=setTimeout(()=>{pt=null;if(!isDragging)openModal(i);},580);
+
+    // Normal mode: setup long-press for edit + potential drag
+    pt=setTimeout(()=>{
+      pt=null;
+      if(!dragSrc) openModal(i);
+    },580);
+
+    // Setup drag handlers on document (so pointer can move anywhere)
+    const onMove=e=>{
+      const dx=e.clientX-startX,dy=e.clientY-startY;
+      if(!dragSrc&&pt&&Math.sqrt(dx*dx+dy*dy)>10){
+        // Start dragging
+        clearTimeout(pt);pt=null;
+        dragSrc=i;
+        const rect=el.getBoundingClientRect();
+        dragOffX=e.clientX-rect.left;
+        dragOffY=e.clientY-rect.top;
+        dragClone=el.cloneNode(true);
+        dragClone.style.cssText='position:fixed;left:'+rect.left+'px;top:'+rect.top+'px;width:'+rect.width+'px;height:'+rect.height+'px;opacity:.8;z-index:9999;pointer-events:none;border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.9);transform:scale(1.12);transition:none;';
+        document.body.appendChild(dragClone);
+        el.style.opacity='.2';
+      }
+      if(dragSrc!==null&&dragClone){
+        dragClone.style.left=(e.clientX-dragOffX)+'px';
+        dragClone.style.top=(e.clientY-dragOffY)+'px';
+        const t=getPadUnder(e.clientX,e.clientY);
+        padEls.forEach((p,j)=>p.classList.toggle('drop-target',j===t&&j!==dragSrc));
+      }
+    };
+
+    const onEnd=e=>{
+      document.removeEventListener('pointermove',onMove);
+      document.removeEventListener('pointerup',onEnd);
+      document.removeEventListener('pointercancel',onCancel);
+      activeDragHandlers=null;
+
+      if(dragSrc!==null){
+        // Finish drag
+        el.style.opacity='';
+        if(dragClone){
+          document.body.removeChild(dragClone);
+          dragClone=null;
+        }
+        padEls.forEach(p=>p.classList.remove('drop-target'));
+        const t=getPadUnder(e.clientX,e.clientY);
+        if(t!==null&&t!==dragSrc) swapPads(dragSrc,t);
+        dragSrc=null;
+      } else if(pt){
+        // Quick tap
+        clearTimeout(pt);pt=null;
+        triggerPad(i);
+      }
+    };
+
+    const onCancel=()=>{
+      document.removeEventListener('pointermove',onMove);
+      document.removeEventListener('pointerup',onEnd);
+      document.removeEventListener('pointercancel',onCancel);
+      activeDragHandlers=null;
+      if(pt){clearTimeout(pt);pt=null;}
+      if(dragSrc!==null){
+        el.style.opacity='';
+        if(dragClone){document.body.removeChild(dragClone);dragClone=null;}
+        padEls.forEach(p=>p.classList.remove('drop-target'));
+        dragSrc=null;
+      }
+    };
+
+    document.addEventListener('pointermove',onMove);
+    document.addEventListener('pointerup',onEnd);
+    document.addEventListener('pointercancel',onCancel);
+    activeDragHandlers={onMove,onEnd,onCancel};
   });
 
-  el.addEventListener('pointermove',e=>{
-    if(moveMode)return;
-    const dx=e.clientX-startX,dy=e.clientY-startY;
-    if(!isDragging&&(pt!==null)&&Math.sqrt(dx*dx+dy*dy)>10){
-      clearTimeout(pt);pt=null;isDragging=true;dragSrc=i;
-      const rect=el.getBoundingClientRect();
-      dragOffX=e.clientX-rect.left;dragOffY=e.clientY-rect.top;
-      dragClone=el.cloneNode(true);
-      dragClone.style.cssText='position:fixed;left:'+rect.left+'px;top:'+rect.top+'px;width:'+rect.width+'px;height:'+rect.height+'px;opacity:.82;z-index:999;pointer-events:none;border-radius:10px;box-shadow:0 8px 32px rgba(0,0,0,.85);transform:scale(1.1);transition:none;';
-      document.body.appendChild(dragClone);
-      el.style.opacity='.25';
-    }
-    if(isDragging&&dragClone){
-      dragClone.style.left=(e.clientX-dragOffX)+'px';
-      dragClone.style.top=(e.clientY-dragOffY)+'px';
-      const t=getPadUnder(e.clientX,e.clientY);
-      padEls.forEach((p,j)=>p.classList.toggle('drop-target',j===t&&j!==dragSrc));
-    }
-  });
-
-  const endDrag=e=>{
-    if(isDragging){
-      isDragging=false;el.style.opacity='';
-      if(dragClone){document.body.removeChild(dragClone);dragClone=null;}
-      padEls.forEach(p=>p.classList.remove('drop-target'));
-      const t=getPadUnder(e.clientX,e.clientY);
-      if(t!==null&&t!==dragSrc)swapPads(dragSrc,t);
-      dragSrc=null;
-    } else if(pt){clearTimeout(pt);pt=null;triggerPad(i);}
-  };
-  el.addEventListener('pointerup',endDrag);
-  el.addEventListener('pointercancel',()=>{
-    clearTimeout(pt);pt=null;
-    if(isDragging){isDragging=false;el.style.opacity='';if(dragClone){document.body.removeChild(dragClone);dragClone=null;}padEls.forEach(p=>p.classList.remove('drop-target'));dragSrc=null;}
-  });
   el.addEventListener('contextmenu',e=>e.preventDefault());
 }
 
