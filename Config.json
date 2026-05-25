@@ -1,294 +1,295 @@
 {
   "version": 5,
-  "saved": "2026-05-16T03:48:09.074Z",
+  "saved": "2026-05-25T18:17:41.420Z",
+  "playerBgUrl": null,
   "pads": [
     {
-      "label": "KICK",
-      "icon": "🥁",
-      "color": 0,
-      "imgUrl": "https://dl.dropboxusercontent.com/scl/fi/ujvnwpdgahkmp1q0raqls/Dobes.jpg?rlkey=u0mf8an72mc263gkfajz440il&st=d15lom78&dl=1",
-      "sndName": "SimplyDobes.mp3",
-      "sndUrl": "https://dl.dropboxusercontent.com/scl/fi/9sdpq03xv5k967m1tvc4n/SimplyDobes.mp3?rlkey=mxrznwfkq9kede4jmvdj9wfbs&st=6w1dj6oz&dl=1"
-    },
-    {
-      "label": "SNARE",
-      "icon": "🎹",
-      "color": 1,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "HI-HAT",
-      "icon": "🎸",
-      "color": 2,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "CLAP",
-      "icon": "🎺",
-      "color": 3,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "BASS",
-      "icon": "🎷",
-      "color": 4,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "LEAD",
-      "icon": "🎻",
-      "color": 5,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "FX 1",
-      "icon": "🎤",
+      "label": "Et Le BUT!!!",
+      "icon": "",
       "color": 6,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/PierreHoude.jpg",
+      "sndName": "SFX_EtLeBuuuut.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_EtLeBuuuut.mp3"
     },
     {
-      "label": "FX 2",
-      "icon": "🔊",
-      "color": 7,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "VOX",
-      "icon": "💥",
-      "color": 8,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "PAD",
-      "icon": "⚡",
-      "color": 9,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "LOOP 1",
-      "icon": "🔥",
-      "color": 10,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "LOOP 2",
-      "icon": "🌊",
-      "color": 11,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "PERC 1",
-      "icon": "💫",
-      "color": 0,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "PERC 2",
-      "icon": "🎵",
-      "color": 1,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "SFX 1",
-      "icon": "🎶",
-      "color": 2,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "SFX 2",
-      "icon": "🎧",
-      "color": 3,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "RISE",
-      "icon": "🎚",
-      "color": 4,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
-    },
-    {
-      "label": "DROP",
-      "icon": "🎛",
+      "label": "LePtit BUM",
+      "icon": "",
       "color": 5,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/YollandeOuelette.jpg",
+      "sndName": "SFX_PtitBUM.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_PtitBUM.mp3"
     },
     {
-      "label": "CRASH",
-      "icon": "🏆",
-      "color": 6,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Détruire",
+      "icon": "",
+      "color": 0,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Detruire.jpg",
+      "sndName": "GAME_Marmottes_Detruire.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GAME_Marmottes_Detruire.mp3"
     },
     {
-      "label": "RIDE",
-      "icon": "💎",
-      "color": 7,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Hutson",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Hutson.jpg",
+      "sndName": "GOAL_xGonGiveItToYa.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_xGonGiveItToYa.mp3"
     },
     {
-      "label": "TOM HI",
-      "icon": "🌙",
-      "color": 8,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Demidov",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Demidov.jpg",
+      "sndName": "Player_Demidov.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Demidov.mp3"
     },
     {
-      "label": "TOM LO",
-      "icon": "⭐",
-      "color": 9,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Anderson",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Anderson.jpg",
+      "sndName": "Player_Anderson.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Anderson.mp3"
     },
     {
-      "label": "OPEN HH",
-      "icon": "🎯",
-      "color": 10,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Ptit baveux",
+      "icon": "",
+      "color": 5,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/YollandeOuelette.jpg",
+      "sndName": "SFX_PtitBaveux.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_PtitBaveux.mp3"
     },
     {
-      "label": "SHAKER",
-      "icon": "🚀",
-      "color": 11,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "2 CHUMs",
+      "icon": "",
+      "color": 5,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/YollandeOuelette.jpg",
+      "sndName": "SFX_2Chums.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_2Chums.mp3"
     },
     {
-      "label": "TAMBR",
+      "label": "Olé Olé Olé",
       "icon": "👏",
       "color": 0,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "GAME_OleOleOle.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GAME_OleOleOle.mp3"
     },
     {
-      "label": "CLAVE",
-      "icon": "🌈",
+      "label": "Newhook",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Newhook.jpg",
+      "sndName": "GOAL_TNT.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_TNT.mp3"
+    },
+    {
+      "label": "Slavkovsky",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Slav.jpg",
+      "sndName": "Player_Salv_1.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Salv_1.mp3"
+    },
+    {
+      "label": "Bolduc",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Bolduc.jpg",
+      "sndName": "Player_Bolduc.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Bolduc.mp3"
+    },
+    {
+      "label": "Rien FAIT!",
+      "icon": "",
+      "color": 0,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Stallone.jpg",
+      "sndName": "SFX_RienFait.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_RienFait.mp3"
+    },
+    {
+      "label": "Shoot MAL",
+      "icon": "",
       "color": 1,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Stallone.jpg",
+      "sndName": "SFX_ShootMal.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_ShootMal.mp3"
     },
     {
-      "label": "COWBLL",
-      "icon": "🎊",
-      "color": 2,
+      "label": "ShippingOut BOSTON",
+      "icon": "💪",
+      "color": 0,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "GAME_ShippingBOSTON.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GAME_ShippingBOSTON.mp3"
     },
     {
-      "label": "BONGO",
-      "icon": "🎉",
+      "label": "I wanna ROCK!",
+      "icon": "🎸",
       "color": 3,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "GOAL_iWannaRock.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_iWannaRock.mp3"
     },
     {
-      "label": "CONGA",
-      "icon": "🦁",
+      "label": "Suzuki",
+      "icon": "",
       "color": 4,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Suzuki.jpg",
+      "sndName": "Player_Suzuki.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Suzuki.mp3"
     },
     {
-      "label": "STAB 1",
-      "icon": "🐯",
-      "color": 5,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "label": "Texier",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Texier.jpg",
+      "sndName": "Player_Texier.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Texier.mp3"
     },
     {
-      "label": "STAB 2",
-      "icon": "🦊",
+      "label": "Penalité",
+      "icon": "",
       "color": 6,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Stallone.jpg",
+      "sndName": "SFX_Penalite.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_Penalite.mp3"
     },
     {
-      "label": "SYNTH 1",
-      "icon": "🐉",
+      "label": "MauvaisJEU",
+      "icon": "",
       "color": 7,
-      "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Stallone.jpg",
+      "sndName": "SFX_MauvaisJEU.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_MauvaisJEU.mp3"
     },
     {
-      "label": "SYNTH 2",
-      "icon": "🌀",
+      "label": "FAKEUX!",
+      "icon": "⛸️",
       "color": 8,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "SFX_FAKAGE.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_FAKAGE.mp3"
     },
     {
-      "label": "NOISE",
-      "icon": "🔮",
-      "color": 9,
+      "label": "Allez MTL!",
+      "icon": "🥅",
+      "color": 3,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "GOAL_AllezMTL.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_AllezMTL.mp3"
     },
     {
-      "label": "SWEEP",
-      "icon": "💣",
-      "color": 10,
+      "label": "Carrier",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Carrier.jpg",
+      "sndName": "Player_Carrier.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Carrier.mp3"
+    },
+    {
+      "label": "Xhekaj",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Xhekaj.jpg",
+      "sndName": "GOAL_CENA.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_CENA.mp3"
+    },
+    {
+      "label": "FAHHHHHH!",
+      "icon": "💀",
+      "color": 8,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "SFX_Faaaah.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_Faaaah.mp3"
     },
     {
-      "label": "FILL",
-      "icon": "🎃",
+      "label": "GAY",
+      "icon": "🌈",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": "SFX_GAY.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_GAY.mp3"
+    },
+    {
+      "label": "WhatAreYouAIMMING",
+      "icon": "🎯",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": "SFX_WhatAreYouAimingAT.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_WhatAreYouAimingAT.mp3"
+    },
+    {
+      "label": "Ace Of SPADE",
+      "icon": "🎤",
+      "color": 3,
+      "imgUrl": null,
+      "sndName": "GOAL_AceSpade.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_AceSpade.mp3"
+    },
+    {
+      "label": "Dobes",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Dobes.jpg",
+      "sndName": "Player_SimplyDobes.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_SimplyDobes.mp3"
+    },
+    {
+      "label": "Veleno",
+      "icon": "",
+      "color": 4,
+      "imgUrl": "https://gumbiny.github.io/Soundboard_NHL/img/Valeno.jpg",
+      "sndName": "Player_Veleno.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/Player_Veleno.mp3"
+    },
+    {
+      "label": "LOBBÉ SHORT",
+      "icon": "🏒",
       "color": 11,
       "imgUrl": null,
-      "sndName": null,
-      "sndUrl": null
+      "sndName": "SFX_LOBBE_SHORT.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_LOBBE_SHORT.mp3"
+    },
+    {
+      "label": "Lobbé_TropLong",
+      "icon": "🏒",
+      "color": 11,
+      "imgUrl": null,
+      "sndName": "SFX_LOBBE_Full.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_LOBBE_Full.mp3"
+    },
+    {
+      "label": "SUS",
+      "icon": "😱",
+      "color": 8,
+      "imgUrl": null,
+      "sndName": "SFX_Sus_AmongUs.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/SFX_Sus_AmongUs.mp3"
+    },
+    {
+      "label": "GOAL! HEY!",
+      "icon": "🥅",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": "GOAL_HEY.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GOAL_HEY.mp3"
+    },
+    {
+      "label": "Sweet Caroline",
+      "icon": "🎺",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": "GAME_SweetCaroline.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/GAME_SweetCaroline.mp3"
+    },
+    {
+      "label": "WeAreTheChampions!",
+      "icon": "🔥",
+      "color": 6,
+      "imgUrl": null,
+      "sndName": "WINNER_WeAreTheChampions.mp3",
+      "sndUrl": "https://gumbiny.github.io/Soundboard_NHL/sound/WINNER_WeAreTheChampions.mp3"
     }
   ]
 }
